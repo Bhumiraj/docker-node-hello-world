@@ -11,5 +11,16 @@ steps:
    - "--file=clouddeploy.yaml"
    - "--region=us-central1"
    - "--project=tribally-host-prj-s1"
+- name: "gcr.io/google.com/cloudsdktool/cloud-sdk"
+  entrypoint: gcloud
+  args:
+   - "deploy"
+   - "releases"
+   - "create"
+   - "test-release-001"
+   - "--project=tribally-host-prj-s1"
+   - "--region=us-central1"
+   - "--delivery-pipeline=my-run-demo-app-1"
+   - "--images=my-app-image=gcr.io/${PROJECT_ID}/helloworldnode"
 options:
   logging: CLOUD_LOGGING_ONLY
