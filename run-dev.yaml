@@ -6,4 +6,4 @@ spec:
   template:
     spec:
       containers:
-      - image: eu.gcr.io/${PROJECT_ID}/helloworldnode
+      - image: gcr.io/${PROJECT_ID}/helloworldnode
