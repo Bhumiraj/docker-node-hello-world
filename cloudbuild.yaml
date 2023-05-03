@@ -17,7 +17,7 @@ steps:
    - "deploy"
    - "releases"
    - "create"
-   - "test-release-001"
+   - "test-release-${BUILD_ID}"
    - "--project=tribally-host-prj-s1"
    - "--region=us-central1"
    - "--delivery-pipeline=my-run-demo-app-1"
