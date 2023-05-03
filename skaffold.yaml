@@ -1,11 +1,11 @@
 apiVersion: skaffold/v3alpha1
 kind: Config
-metadata:
-  name: myapp
+metadata: 
+  name: deploy-run-quickstart
+profiles:
+- name: dev
+  manifests:
+    rawYaml:
+    - run-dev.yaml
 deploy:
   cloudrun: {}
-profiles:
-  - name: dev #should match with cloudeploy profiles
-    manifests:
-      rawYaml:
-        - cloud-deploy-run-yamls/myapp-dev.yaml
